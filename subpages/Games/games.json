@@ -1,0 +1,277 @@
+[
+  {
+    "id": "skyrim-5",
+    "title": "The Elder Scrolls V: Skyrim Special Edition",
+    "status": "Playing",
+    "rating": 0,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/44ddf432eb6704a14abb1e3445a52436.png",
+
+    "started": "12/06/2025",
+    "finished": null,
+
+    "genres": ["RPG"],
+    "playtime": 7,
+    "release": 2016,
+    "dlc": ["Anniversary Edition"],
+
+    "notes": ""
+  },
+
+  {
+    "id": "nier-automata",
+    "title": "NieR:Automata",
+    "status": "Planning",
+    "rating": 0,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/8ea40402d86c45e1763290987873772c.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Action RPG", "Fighting", "Shooter", "Adventure"],
+    "playtime": null,
+    "release": 2017,
+    "dlc": ["3C3C1D119440927"],
+
+    "notes": ""
+  },
+
+  {
+    "id": "minecraft",
+    "title": "Minecraft",
+    "status": "Completed",
+    "rating": 5,
+    "cover": "https://cdn2.steamgriddb.com/icon/add7a048049671970976f3e18f21ade3/32/256x256.png",
+
+    "started": "2013",
+    "finished": null,
+
+    "genres": ["Survival", "Action-Adventure", "Nonlinear", "Open-World"],
+    "playtime": 700,
+    "release": 2011,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "terraria",
+    "title": "Terraria",
+    "status": "Completed",
+    "rating": 5,
+    "cover": "https://forums.terraria.org/index.php?attachments/icon-png.280655/",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Action", "Adventure", "Indie", "RPG"],
+    "playtime": 549,
+    "release": 2011,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "rac-rift-apart",
+    "title": "Ratchet and Clank: Rift Apart",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.unrealengine.com/egs-ratchetclankriftapart-insomniacgames-ic1-400x400-8375c8fb3499.png?resize=1&w=480&h=270&quality=medium",
+
+    "started": "01/11/2024",
+    "finished": "01/26/2024",
+
+    "genres": ["Platformer", "Adventure", "TPS"],
+    "playtime": 40,
+    "release": 2021,
+    "dlc": [],
+
+    "notes": "Out of the newer RaC games, definitely my favorite. Highly recommend giving it a try."
+  },
+
+  {
+    "id": "cod4",
+    "title": "Call of Duty - Modern Warfare",
+    "status": "Completed",
+    "rating": 5,
+    "cover": "https://cdn2.steamgriddb.com/icon/59b109c700b500daa9ef3a6769bc8c6f.png",
+
+    "started": "??/??/????",
+    "finished": "??/??/????",
+
+    "genres": ["Action", "First Person Shooter"],
+    "playtime": 20,
+    "release": 2007,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "cod-mw2",
+    "title": "Call of Duty - Modern Warfare 2",
+    "status": "Completed",
+    "rating": 5,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/0b80ddc95bcf9132d2493436a223ca96.png",
+
+    "started": "??/??/????",
+    "finished": "??/??/????",
+
+    "genres": ["Action", "First Person Shooter"],
+    "playtime": 20,
+    "release": 2009,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "cod-mw3",
+    "title": "Call of Duty - Modern Warfare 3",
+    "status": "Completed",
+    "rating": 5,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/1bc60bcdf112703a1b854c14327c301d.png",
+
+    "started": "??/??/????",
+    "finished": "??/??/????",
+
+    "genres": ["Action", "First Person Shooter"],
+    "playtime": 20,
+    "release": 2011,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "hitman-2",
+    "title": "Hitman 2",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/fc83b39f9ff554b393188dbc36e3f835.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Stealth", "Shooter", "Action-Adventure"],
+    "playtime": 44,
+    "release": 2018,
+    "dlc": [
+      "GOTY",
+      "Collectors Pack",
+      "Executive Pack",
+      "Expansion Pass",
+      "Legacy Pack"
+    ],
+
+    "notes": ""
+  },
+
+  {
+    "id": "trl",
+    "title": "Tomb Raider: Legend",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/d983db47634e1936eb568b79884012ac.png",
+
+    "started": "??/??/????",
+    "finished": "??/??/????",
+
+    "genres": ["Action", "First Person Shooter"],
+    "playtime": 105,
+    "release": 2006,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "fc5",
+    "title": "Far Cry 5",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.steamgriddb.com/icon/90f1f4972d133619a60c30f3559ec0c5/32/256x256.png",
+
+    "started": "??/??/????",
+    "finished": "??/??/????",
+
+    "genres": ["Action", "First Person Shooter", "Adventure", "Open World"],
+    "playtime": 49,
+    "release": 2018,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "subnautica",
+    "title": "Subnautica",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.steamgriddb.com/icon/1e93a9e455f77c12ee3365c92871082b/32/128x128.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Adventure", "Indie", "Action", "Open World"],
+    "playtime": 44,
+    "release": 2018,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "jc3",
+    "title": "Just Cause 3",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.steamgriddb.com/icon/e0d1b5ce9153ef8740cff2ad288b5b53/32/128x128.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Adventure", "TPS", "Action", "Open World", "Nonlinear"],
+    "playtime": 40,
+    "release": 2015,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "dh2",
+    "title": "Dishonored 2",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.steamgriddb.com/icon/7f346bb939125766393fd9addfa10a93/32/128x128.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Stealth", "FPS", "Shooter", "Fighting", "Platformer"],
+    "playtime": 36,
+    "release": 2016,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "fc6",
+    "title": "Far Cry 6",
+    "status": "Dropped",
+    "rating": 1,
+    "cover": "https://cdn2.steamgriddb.com/icon/bb0848134966fc5db45aa411b8933a5d/32/256x256.png",
+
+    "started": "02/10/2024",
+    "finished": "02/18/2024",
+
+    "genres": ["First Person Shooter", "Action", "Adventure", "Open World"],
+    "playtime": 8,
+    "release": 2021,
+    "dlc": [],
+
+    "notes": "By far the worst Far Cry game. I was really hoping for something better."
+  }
+]

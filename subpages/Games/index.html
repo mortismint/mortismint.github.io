@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Games List</title>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <h2>Filters</h2>
+
+        <div class="filter-group">
+          <h3>Status</h3>
+          <label><input type="checkbox" checked /> Playing</label>
+          <label><input type="checkbox" checked /> Planning</label>
+          <label><input type="checkbox" checked /> Completed</label>
+          <label><input type="checkbox" checked /> Paused</label>
+          <label><input type="checkbox" checked /> Dropped</label>
+        </div>
+
+        <div class="filter-group">
+          <h3>Sort by</h3>
+          <label><input type="radio" name="sort" /> Score ↑</label>
+          <label><input type="radio" name="sort" /> Score ↓</label>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section>
+          <h1>Playing</h1>
+          <div class="game-list" id="playing-list"></div>
+        </section>
+
+        <section>
+          <h1>Planning</h1>
+          <div class="game-list" id="planning-list"></div>
+        </section>
+
+        <section>
+          <h1>Completed</h1>
+          <div class="game-list" id="completed-list"></div>
+        </section>
+
+        <section>
+          <h1>Paused</h1>
+          <div class="game-list" id="paused-list"></div>
+        </section>
+
+        <section>
+          <h1>Dropped</h1>
+          <div class="game-list" id="dropped-list"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
