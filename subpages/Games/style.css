@@ -65,10 +65,15 @@ section h1 {
 }
 
 /* Game List */
+.game-section {
+  display: flex;
+  flex-direction: column;
+}
+
 .game-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .game-card {
@@ -92,12 +97,17 @@ section h1 {
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
-  background: var(--surface1);
 }
 
 .info {
   display: flex;
   flex-direction: column;
+  gap: 6px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
   gap: 6px;
 }
 
@@ -107,18 +117,99 @@ section h1 {
   line-height: 1.2;
 }
 
+.fav {
+  cursor: pointer;
+  font-size: 1rem;
+  display: none;
+  transition: color 0.15s ease;
+}
+
+.fav:hover {
+  color: var(--yellow);
+}
+
+.fav.active {
+  color: var(--yellow);
+  display: contents;
+}
+
 .stars {
   font-size: 0.9rem;
   color: var(--peach);
 }
 
-.status {
-  font-size: 0.75rem;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: var(--overlay0);
-  color: var(--subtext1);
-  width: fit-content;
+/* Button */
+.status-filter,
+.tag-filter {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  text-align: left;
+  background: var(--mantle);
+  color: var(--text);
+  border: 1px solid var(--mantle);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.status-filter:hover,
+.tag-filter:hover {
+  background: var(--surface0);
+  color: var(--text);
+}
+
+.status-filter.active,
+.tag-filter.active {
+  background: var(--crust);
+  color: var(--text);
+}
+
+/* Searchbar */
+.search-wrapper {
+  position: relative;
+  width: 200px;
+}
+
+.searchbar {
+  background: var(--mantle);
+  border: 1px solid var(--mantle);
+  border-radius: 6px;
+  padding: 6px 12px 6px 32px;
+  color: var(--text);
+  width: 100%;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.search-prefix {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* Sort */
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--crust);
+  color: var(--text);
+  border: 1px solid var(--mantle);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
 }
 
 /* Details */

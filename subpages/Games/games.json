@@ -4,12 +4,14 @@
     "title": "The Elder Scrolls V: Skyrim Special Edition",
     "status": "Playing",
     "rating": 0,
+    "tags": [],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/44ddf432eb6704a14abb1e3445a52436.png",
 
     "started": "12/06/2025",
     "finished": null,
 
     "genres": ["RPG"],
+    "console": "PC",
     "playtime": 7,
     "release": 2016,
     "dlc": ["Anniversary Edition"],
@@ -28,6 +30,7 @@
     "finished": null,
 
     "genres": ["Action RPG", "Fighting", "Shooter", "Adventure"],
+    "console": "PC",
     "playtime": null,
     "release": 2017,
     "dlc": ["3C3C1D119440927"],
@@ -36,16 +39,150 @@
   },
 
   {
+    "id": "hatsune-miku-pdiva",
+    "title": "Hatsune Miku: Project DIVA Mega Mix+",
+    "status": "Planning",
+    "rating": 0,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/1d54c76f48f146c3b2d66daf9d7f845e.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Rhythm", "Anime", "Arcade", "Music"],
+    "console": "PC",
+    "playtime": null,
+    "release": 2022,
+    "dlc": ["Extra Song Pack", "Item Unlock Key"],
+
+    "notes": ""
+  },
+
+  {
+    "id": "ace-attorney",
+    "title": "Phoenix Wright: Ace Attorney Trilogy",
+    "status": "Planning",
+    "rating": 0,
+    "cover": "https://cdn2.steamgriddb.com/icon/072b030ba126b2f4b2374f342be9ed44/32/256x256.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Detective", "Visual Novel", "Mystery"],
+    "console": "PC",
+    "playtime": null,
+    "release": 2019,
+    "dlc": [],
+
+    "notes": "Frick you miggle"
+  },
+
+  {
+    "id": "p3r",
+    "title": "Persona 3 Reload",
+    "status": "Planning",
+    "rating": 0,
+    "cover": "https://cdn2.steamgriddb.com/icon/57b3c556c09ac06cd6e1b4db8ae208e4/24/256x256.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["JRPG", "Party-Based RPG", "Turn-Based RPG", "Anime"],
+    "console": "PC",
+    "playtime": null,
+    "release": 2024,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "ahit",
+    "title": "A Hat in Time",
+    "status": "Planning",
+    "rating": 0,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/ab4ac6732cd2448b9fbf36555a896983.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["3D Platformer", "Collectathon", "Adventure", "Indie"],
+    "console": "PC",
+    "playtime": null,
+    "release": 2017,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "dmc5",
+    "title": "Devil May Cry 5",
+    "status": "Planning",
+    "rating": 0,
+    "cover": "https://cdn2.steamgriddb.com/icon/2b6d65b9a9445c4271ab9076ead5605a/24/256x256.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Action", "Hack and Slash", "Action"],
+    "console": "PC",
+    "playtime": null,
+    "release": 2019,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "eldenring",
+    "title": "ELDEN RING",
+    "status": "Planning",
+    "rating": 0,
+    "cover": "https://cdn2.steamgriddb.com/icon/7316e11fe78963395fbab4a85d0b8f85/32/256x256.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Action", "RPG", "Adventure"],
+    "console": "PC",
+    "playtime": null,
+    "release": 2022,
+    "dlc": ["Shadow of the Erdtree"],
+
+    "notes": ""
+  },
+  {
+    "id": "eldenring-nightreign",
+    "title": "ELDEN RING NIGHTREIGN",
+    "status": "Planning",
+    "rating": 0,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/65caca8759f21cc931afc412a9fe9b59.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Action", "RPG", "Adventure"],
+    "console": "PC",
+    "playtime": null,
+    "release": 2025,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
     "id": "minecraft",
     "title": "Minecraft",
-    "status": "Completed",
+    "status": "Ongoing",
     "rating": 5,
+    "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon/add7a048049671970976f3e18f21ade3/32/256x256.png",
 
     "started": "2013",
     "finished": null,
 
     "genres": ["Survival", "Action-Adventure", "Nonlinear", "Open-World"],
+    "console": "PC",
     "playtime": 700,
     "release": 2011,
     "dlc": [],
@@ -56,16 +193,260 @@
   {
     "id": "terraria",
     "title": "Terraria",
-    "status": "Completed",
+    "status": "Ongoing",
     "rating": 5,
+    "tags": ["favorite"],
     "cover": "https://forums.terraria.org/index.php?attachments/icon-png.280655/",
 
     "started": null,
     "finished": null,
 
     "genres": ["Action", "Adventure", "Indie", "RPG"],
+    "console": "PC",
     "playtime": 549,
     "release": 2011,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "jak1",
+    "title": "Jak and Daxter: The Precursor Legacy",
+    "status": "Completed",
+    "rating": 5,
+    "tags": ["favorite"],
+    "cover": "https://cdn2.steamgriddb.com/icon/20d1b1738e2f75c4629e32f1011ab25d/32/256x256.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Platformer", "Adventure", "Casual", "Open World", "Speedrun"],
+    "console": ["PS2", "OpenGOAL"],
+    "playtime": 500,
+    "release": 2001,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "jak2",
+    "title": "Jak II: Renegade",
+    "status": "Completed",
+    "rating": 5,
+    "tags": ["favorite"],
+    "cover": "https://cdn2.steamgriddb.com/icon/52a7494159529c38b9c69e9946ba4f27/32/256x256.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": [
+      "Platformer",
+      "Adventure",
+      "Action",
+      "Casual",
+      "Open World",
+      "Speedrun"
+    ],
+    "console": ["PS2", "OpenGOAL"],
+    "playtime": 500,
+    "release": 2003,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "jak3",
+    "title": "Jak 3",
+    "status": "Completed",
+    "rating": 5,
+    "tags": ["favorite"],
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/bcfa8a783aaf938cdef361634d5f9289.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": [
+      "Platformer",
+      "Adventure",
+      "Casual",
+      "Action",
+      "Open World",
+      "Speedrun"
+    ],
+    "console": ["PS2", "OpenGOAL"],
+    "playtime": 800,
+    "release": 2004,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "jakx",
+    "title": "Jak X: Combat Racing",
+    "status": "Completed",
+    "rating": 5,
+    "tags": ["favorite"],
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/543aed787cac2df5cab649947c2d641a.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": [
+      "Racing",
+      "Adventure",
+      "Casual",
+      "Action",
+      "Vehicular Combat",
+      "Speedrun"
+    ],
+    "console": "PS2",
+    "playtime": 200,
+    "release": 2005,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "rac1",
+    "title": "Ratchet and Clank",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.steamgriddb.com/icon/d2cd33e9c0236a8c2d8bd3fa91ad3acf/32/256x256.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": [
+      "Third Person Shooter",
+      "Adventure",
+      "Platformer",
+      "Action",
+      "Speedrun"
+    ],
+    "console": ["PS2", "PS3"],
+    "playtime": 200,
+    "release": 2002,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "rac2",
+    "title": "Ratchet and Clank 2: Going Commando",
+    "status": "Completed",
+    "rating": 5,
+    "tags": ["favorite"],
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/f1298750ed09618717f9c10ea8d1d3b0.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": [
+      "Third Person Shooter",
+      "Adventure",
+      "Platformer",
+      "Action",
+      "Speedrun"
+    ],
+    "console": ["PS2", "PS3"],
+    "playtime": 500,
+    "release": 2003,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "rac1",
+    "title": "Ratchet and Clank 3: Up Your Arsenal",
+    "status": "Completed",
+    "rating": 5,
+    "tags": ["favorite"],
+    "cover": "https://cdn2.steamgriddb.com/icon/a36b598abb934e4528412e5a2127b931/32/256x256.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": [
+      "Third Person Shooter",
+      "Adventure",
+      "Platformer",
+      "Action",
+      "Speedrun"
+    ],
+    "console": ["PS2", "PS3"],
+    "playtime": 500,
+    "release": 2004,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "rac4",
+    "title": "Ratchet: Deadlocked",
+    "status": "Completed",
+    "rating": 5,
+    "tags": ["favorite"],
+    "cover": "https://cdn2.steamgriddb.com/icon/63cdcaf145863d57408d00bafbe9eee9/32/256x256.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": [
+      "Third Person Shooter",
+      "Adventure",
+      "Platformer",
+      "Action",
+      "Speedrun"
+    ],
+    "console": ["PS2", "PS3"],
+    "playtime": 600,
+    "release": 2005,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "daxter",
+    "title": "Daxter",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/b4d168b48157c623fbd095b4a565b5bb.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Platformer", "Adventure", "Casual", "Action", "Speedrun"],
+    "console": "PSP",
+    "playtime": 70,
+    "release": 2005,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "jaktlf",
+    "title": "Jak and Daxter: The Lost Frontier",
+    "status": "Completed",
+    "rating": 3,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/1c150c70579a81b2b641b4a98de07cf6.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Platformer", "Adventure", "Casual", "Action"],
+    "console": ["PS2", "PSP"],
+    "playtime": 50,
+    "release": 2009,
     "dlc": [],
 
     "notes": ""
@@ -82,6 +463,7 @@
     "finished": "01/26/2024",
 
     "genres": ["Platformer", "Adventure", "TPS"],
+    "console": "PC",
     "playtime": 40,
     "release": 2021,
     "dlc": [],
@@ -96,10 +478,11 @@
     "rating": 5,
     "cover": "https://cdn2.steamgriddb.com/icon/59b109c700b500daa9ef3a6769bc8c6f.png",
 
-    "started": "??/??/????",
-    "finished": "??/??/????",
+    "started": null,
+    "finished": null,
 
     "genres": ["Action", "First Person Shooter"],
+    "console": "PC",
     "playtime": 20,
     "release": 2007,
     "dlc": [],
@@ -114,10 +497,10 @@
     "rating": 5,
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/0b80ddc95bcf9132d2493436a223ca96.png",
 
-    "started": "??/??/????",
-    "finished": "??/??/????",
-
+    "started": null,
+    "finished": null,
     "genres": ["Action", "First Person Shooter"],
+    "console": "PC",
     "playtime": 20,
     "release": 2009,
     "dlc": [],
@@ -130,12 +513,14 @@
     "title": "Call of Duty - Modern Warfare 3",
     "status": "Completed",
     "rating": 5,
+    "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/1bc60bcdf112703a1b854c14327c301d.png",
 
-    "started": "??/??/????",
-    "finished": "??/??/????",
+    "started": null,
+    "finished": null,
 
     "genres": ["Action", "First Person Shooter"],
+    "console": "PC",
     "playtime": 20,
     "release": 2011,
     "dlc": [],
@@ -154,6 +539,7 @@
     "finished": null,
 
     "genres": ["Stealth", "Shooter", "Action-Adventure"],
+    "console": "PC",
     "playtime": 44,
     "release": 2018,
     "dlc": [
@@ -168,21 +554,60 @@
   },
 
   {
+    "id": "doom-eternal",
+    "title": "DOOM Eternal",
+    "status": "Completed",
+    "rating": 5,
+    "tags": ["favorite"],
+    "cover": "https://cdn2.steamgriddb.com/icon/b83612231364b4cde46b9282b2d4d054/32/256x256.png",
+    "started": null,
+    "finished": null,
+
+    "genres": ["FPS", "Action", "Gore", "Fast-Paced"],
+    "console": "PC",
+    "playtime": 25,
+    "release": 2020,
+    "dlc": ["The Ancient Gods - Part Two"],
+
+    "notes": ""
+  },
+
+  {
     "id": "trl",
     "title": "Tomb Raider: Legend",
     "status": "Completed",
     "rating": 4,
+    "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/d983db47634e1936eb568b79884012ac.png",
-
-    "started": "??/??/????",
-    "finished": "??/??/????",
+    "started": null,
+    "finished": null,
 
     "genres": ["Action", "First Person Shooter"],
+    "console": "PC",
     "playtime": 105,
     "release": 2006,
     "dlc": [],
 
     "notes": ""
+  },
+
+  {
+    "id": "mec",
+    "title": "Mirror's Edge Catalyst",
+    "status": "Completed",
+    "rating": 5,
+    "tags": ["favorite"],
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/c7f66351c012165813d0b478effab44d.png",
+    "started": null,
+    "finished": null,
+
+    "genres": ["Parkour", "Action", "Adventure"],
+    "console": "PC",
+    "playtime": 18,
+    "release": 2016,
+    "dlc": [],
+
+    "notes": "Absolute banger game and awesome speedrun."
   },
 
   {
@@ -192,10 +617,11 @@
     "rating": 4,
     "cover": "https://cdn2.steamgriddb.com/icon/90f1f4972d133619a60c30f3559ec0c5/32/256x256.png",
 
-    "started": "??/??/????",
-    "finished": "??/??/????",
+    "started": null,
+    "finished": null,
 
     "genres": ["Action", "First Person Shooter", "Adventure", "Open World"],
+    "console": "PC",
     "playtime": 49,
     "release": 2018,
     "dlc": [],
@@ -214,6 +640,7 @@
     "finished": null,
 
     "genres": ["Adventure", "Indie", "Action", "Open World"],
+    "console": "PC",
     "playtime": 44,
     "release": 2018,
     "dlc": [],
@@ -232,11 +659,60 @@
     "finished": null,
 
     "genres": ["Adventure", "TPS", "Action", "Open World", "Nonlinear"],
+    "console": "PC",
     "playtime": 40,
     "release": 2015,
     "dlc": [],
 
     "notes": ""
+  },
+
+  {
+    "id": "bfbbr",
+    "title": "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/393a0f103dfdc3798cf1cfc2e7bdbc1f.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Platformer",
+      "Semi Open World"
+    ],
+    "console": ["PC", "PS4"],
+    "playtime": 16,
+    "release": 2020,
+    "dlc": [],
+
+    "notes": "Just a nostalgic game with fresh graphics."
+  },
+
+  {
+    "id": "jc4",
+    "title": "Just Cause 4",
+    "status": "Completed",
+    "rating": 3,
+    "cover": "https://cdn2.steamgriddb.com/icon/7e67622685947b49f374229b83be6cd6/32/1024x1024.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": ["Adventure", "TPS", "Action", "Open World", "Nonlinear"],
+    "console": "PC",
+    "playtime": 16,
+    "release": 2018,
+    "dlc": [
+      "Digital Deluxe Content",
+      "Deathstalker Scorpion Pack",
+      "Renegade Pack"
+    ],
+
+    "notes": "Unfortunately it wasn't as good as Just Cause 3, definitely expected more. Not a bad game though."
   },
 
   {
@@ -250,8 +726,51 @@
     "finished": null,
 
     "genres": ["Stealth", "FPS", "Shooter", "Fighting", "Platformer"],
+    "console": "PC",
     "playtime": 36,
     "release": 2016,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "ac7",
+    "title": "Ace Combat 7: Skies Unknown",
+    "status": "Completed",
+    "rating": 4,
+    "cover": "https://cdn2.steamgriddb.com/icon/4a7f8ff99efa3673c1bf7d079e86ff3b/32/256x256.png",
+
+    "started": null,
+    "finished": null,
+
+    "genres": [
+      "Air Combat Simulation",
+      "FPS",
+      "Shooter",
+      "Fighting",
+      "Platformer"
+    ],
+    "console": "PC",
+    "playtime": 15,
+    "release": 2019,
+    "dlc": [],
+
+    "notes": ""
+  },
+
+  {
+    "id": "persona5",
+    "title": "Persona 5 Royal",
+    "status": "Paused",
+    "rating": 0,
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/a11ee83e7026b0c537c7cfff4d0135b3.png",
+    "started": null,
+    "finished": null,
+    "genres": ["Role-Playing", "Social-Simulation", "Turn-Based RPG"],
+    "console": "PC",
+    "playtime": 26,
+    "release": 2019,
     "dlc": [],
 
     "notes": ""
@@ -268,6 +787,7 @@
     "finished": "02/18/2024",
 
     "genres": ["First Person Shooter", "Action", "Adventure", "Open World"],
+    "console": "PC",
     "playtime": 8,
     "release": 2021,
     "dlc": [],

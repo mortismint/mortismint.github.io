@@ -8,53 +8,89 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
     <title>Games List</title>
   </head>
   <body>
     <div class="app">
       <aside class="sidebar">
+        <div class="filter-group">
+          <div class="search-wrapper">
+            <input
+              type="text"
+              id="search"
+              class="searchbar"
+              placeholder="Search games..."
+            />
+            <span class="search-prefix">
+              <i class="fas fa-magnifying-glass"></i>
+            </span>
+          </div>
+        </div>
+
         <h2>Filters</h2>
 
         <div class="filter-group">
           <h3>Status</h3>
-          <label><input type="checkbox" checked /> Playing</label>
-          <label><input type="checkbox" checked /> Planning</label>
-          <label><input type="checkbox" checked /> Completed</label>
-          <label><input type="checkbox" checked /> Paused</label>
-          <label><input type="checkbox" checked /> Dropped</label>
+          <button class="status-filter active" data-status="All">All</button>
+          <button class="status-filter" data-status="Playing">Playing</button>
+          <button class="status-filter" data-status="Planning">Planning</button>
+          <button class="status-filter" data-status="Ongoing">Ongoing</button>
+          <button class="status-filter" data-status="Completed">
+            Completed
+          </button>
+          <button class="status-filter" data-status="Paused">Paused</button>
+          <button class="status-filter" data-status="Dropped">Dropped</button>
         </div>
 
         <div class="filter-group">
-          <h3>Sort by</h3>
-          <label><input type="radio" name="sort" /> Score ↑</label>
-          <label><input type="radio" name="sort" /> Score ↓</label>
+          <h3>Tags</h3>
+          <button class="tag-filter active" data-tag="All">All</button>
+          <button class="tag-filter" data-tag="favorite">Favorites</button>
+        </div>
+
+        <div class="filter-group">
+          <h3>Sort</h3>
+          <select id="sort-score" class="sort">
+            <option value="desc">Score (High → Low)</option>
+            <option value="asc">Score (Low → High)</option>
+          </select>
         </div>
       </aside>
 
       <main class="content">
-        <section>
-          <h1>Playing</h1>
-          <div class="game-list" id="playing-list"></div>
+        <section class="game-section" data-status="Playing">
+          <h2>Playing</h2>
+          <div id="playing-list" class="game-list"></div>
         </section>
 
-        <section>
-          <h1>Planning</h1>
-          <div class="game-list" id="planning-list"></div>
+        <section class="game-section" data-status="Planning">
+          <h2>Planning</h2>
+          <div id="planning-list" class="game-list"></div>
         </section>
 
-        <section>
-          <h1>Completed</h1>
-          <div class="game-list" id="completed-list"></div>
+        <section class="game-section" data-status="Ongoing">
+          <h2>Ongoing</h2>
+          <div id="ongoing-list" class="game-list"></div>
         </section>
 
-        <section>
-          <h1>Paused</h1>
-          <div class="game-list" id="paused-list"></div>
+        <section class="game-section" data-status="Completed">
+          <h2>Completed</h2>
+          <div id="completed-list" class="game-list"></div>
         </section>
 
-        <section>
-          <h1>Dropped</h1>
-          <div class="game-list" id="dropped-list"></div>
+        <section class="game-section" data-status="Paused">
+          <h2>Paused</h2>
+          <div id="paused-list" class="game-list"></div>
+        </section>
+
+        <section class="game-section" data-status="Dropped">
+          <h2>Dropped</h2>
+          <div id="dropped-list" class="game-list"></div>
         </section>
       </main>
     </div>
