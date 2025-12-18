@@ -22,6 +22,10 @@ const lists = {
   Dropped: document.getElementById("dropped-list"),
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".stats-line").style.width = "80%";
+});
+
 /* =========================
    HELPERS
 ========================= */
@@ -57,6 +61,8 @@ function createGameEntry(game) {
   const entry = document.createElement("div");
   entry.className = "game-entry";
 
+  const lastPlayedText = game.lastPlayed ? game.lastPlayed : "Unknown";
+
   entry.dataset.status = game.status;
   entry.dataset.rating = game.rating || 0;
   entry.dataset.tags = game.tags ? game.tags.join(",") : "";
@@ -64,7 +70,8 @@ function createGameEntry(game) {
   entry.innerHTML = `
     <div class="game-card">
       <img class="cover" src="${game.cover}" alt="${game.title} cover">
-      <div class="info">
+
+      <div class="main-info">
         <div class="title-row">
           <span
             class="fav ${game.tags?.includes("favorite") ? "active" : ""}"
@@ -75,7 +82,28 @@ function createGameEntry(game) {
         <div class="stars">${renderStars(game.rating || 0)}</div>
         <span class="status">${game.status}</span>
       </div>
+
+      ${
+        game.status !== "Planning"
+          ? `
+        <div class="side-info">
+          <div class="progress-row">
+            ${game.progress === 100 ? `<span class="platinum">🏆</span>` : ""}
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                style="width: ${game.progress || 0}%"
+              ></div>
+            </div>
+            <div class="progress-value">${game.progress || 0}%</div>
+          </div>
+          <div class="last-played">Last played: ${lastPlayedText}</div>
+        </div>
+      `
+          : ""
+      }
     </div>
+
     <div class="game-details">
       <div class="details-grid">
         ${
@@ -227,3 +255,51 @@ fetch("games.json")
     renderGames();
   })
   .catch((err) => console.error("Failed to load games.json", err));
+
+/* =========================
+   STATS
+========================= */
+
+function updateStats() {
+  const counts = {
+    Total: allGames.length,
+    Playing: allGames.filter((g) => g.status === "Playing").length,
+    Planning: allGames.filter((g) => g.status === "Planning").length,
+    Completed: allGames.filter((g) => g.status === "Completed").length,
+    Paused: allGames.filter((g) => g.status === "Paused").length,
+    Dropped: allGames.filter((g) => g.status === "Dropped").length,
+  };
+
+  document.getElementById("total-games").textContent = counts.Total;
+  document.getElementById("playing-count").textContent = counts.Playing;
+  document.getElementById("planning-count").textContent = counts.Planning;
+  document.getElementById("completed-count").textContent = counts.Completed;
+  document.getElementById("paused-count").textContent = counts.Paused;
+  document.getElementById("dropped-count").textContent = counts.Dropped;
+
+  // Total hours
+  const totalHours = allGames.reduce((sum, g) => sum + (g.playtime || 0), 0);
+  document.getElementById("total-hours").textContent = totalHours;
+
+  // Average completion (exclude Planning)
+  const gamesWithProgress = allGames.filter((g) => g.status !== "Planning");
+  const avgCompletion = gamesWithProgress.length
+    ? Math.round(
+        gamesWithProgress.reduce((sum, g) => sum + (g.progress || 0), 0) /
+          gamesWithProgress.length
+      )
+    : 0;
+
+  document.getElementById("avg-completion").textContent = avgCompletion;
+  document.querySelector(".library-progress .progress-fill-stats").style.width =
+    avgCompletion + "%";
+}
+
+// Call after render
+fetch("games.json")
+  .then((res) => res.json())
+  .then((games) => {
+    allGames = games;
+    renderGames();
+    updateStats();
+  });

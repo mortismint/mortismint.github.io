@@ -16,6 +16,31 @@
     <title>Games List</title>
   </head>
   <body>
+    <div class="stats-header">
+      <h2>Stats</h2>
+
+      <div class="stats-content">
+        <div>Total Games: <span id="total-games">0</span></div>
+        <div>Playing: <span id="playing-count">0</span></div>
+        <div>Planning: <span id="planning-count">0</span></div>
+        <div>Completed: <span id="completed-count">0</span></div>
+        <div>Paused: <span id="paused-count">0</span></div>
+        <div>Dropped: <span id="dropped-count">0</span></div>
+        <div>Total Hours: <span id="total-hours">0</span></div>
+      </div>
+
+      <div class="library-progress">
+        <div class="progress-bar-stats">
+          <div class="progress-fill-stats" style="width: 0%"></div>
+        </div>
+        <div class="progress-label">
+          Average Completion: <span id="avg-completion">0</span>%
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-line"></div>
+
     <div class="app">
       <aside class="sidebar">
         <div class="filter-group">

@@ -77,18 +77,26 @@ section h1 {
 }
 
 .game-card {
+  cursor: pointer;
   display: flex;
   gap: 16px;
   background: var(--mantle);
   padding: 12px;
   border-radius: 12px;
-  align-items: center;
+  align-items: flex-start;
   transition: background 150ms ease, transform 150ms ease;
 }
 
 .game-card:hover {
   background: var(--surface0);
   transform: translateY(-2px);
+}
+
+.main-info {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .cover {
@@ -118,7 +126,7 @@ section h1 {
 }
 
 .fav {
-  cursor: pointer;
+  cursor: default;
   font-size: 1rem;
   display: none;
   transition: color 0.15s ease;
@@ -198,7 +206,6 @@ input:focus {
 }
 
 /* Sort */
-
 .sort {
   display: flex;
   align-items: center;
@@ -244,8 +251,118 @@ input:focus {
   line-height: 1.4;
 }
 
-/* Colors Palette */
+/* Progress */
+.side-info {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  min-width: 120px;
+  cursor: default;
+}
 
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.platinum {
+  font-size: 14px;
+  filter: drop-shadow(0 0 4px rgba(180, 200, 255, 0.6));
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--surface0);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), var(--teal));
+  transition: width 250ms ease;
+}
+
+.last-played {
+  font-size: 11px;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.progress-value {
+  font-size: 12px;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+/* Stats Header */
+.stats-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.stats-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.stats-line {
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--text), transparent);
+  margin: 12px auto 0;
+  transition: width 0.5s ease;
+}
+
+.stats-content {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Library Progress */
+.library-progress {
+  width: 80%;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: stretch;
+}
+
+.library-progress .progress-bar-stats {
+  width: 100%;
+  height: 10px;
+  background: var(--surface0);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.library-progress .progress-fill-stats {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), var(--teal));
+  transition: width 500ms ease;
+}
+
+.library-progress .progress-label {
+  font-size: 12px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+/* Colors Palette */
 :root {
   --rosewater: #f5e0dc;
   --flamingo: #f2cdcd;

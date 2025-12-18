@@ -6,9 +6,11 @@
     "rating": 0,
     "tags": [],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/44ddf432eb6704a14abb1e3445a52436.png",
+    "lastPlayed": "2025-03-12",
 
     "started": "12/06/2025",
     "finished": null,
+    "progress": 40,
 
     "genres": ["RPG"],
     "console": "PC",
@@ -177,6 +179,7 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon/add7a048049671970976f3e18f21ade3/32/256x256.png",
+    "progress": 100,
 
     "started": "2013",
     "finished": null,
@@ -197,6 +200,7 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://forums.terraria.org/index.php?attachments/icon-png.280655/",
+    "progress": 100,
 
     "started": null,
     "finished": null,
@@ -217,6 +221,7 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon/20d1b1738e2f75c4629e32f1011ab25d/32/256x256.png",
+    "progress": 100,
 
     "started": null,
     "finished": null,
@@ -237,6 +242,7 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon/52a7494159529c38b9c69e9946ba4f27/32/256x256.png",
+    "progress": 100,
 
     "started": null,
     "finished": null,
@@ -264,6 +270,7 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/bcfa8a783aaf938cdef361634d5f9289.png",
+    "progress": 100,
 
     "started": null,
     "finished": null,
@@ -291,6 +298,7 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/543aed787cac2df5cab649947c2d641a.png",
+    "progress": 100,
 
     "started": null,
     "finished": null,
@@ -317,6 +325,7 @@
     "status": "Completed",
     "rating": 4,
     "cover": "https://cdn2.steamgriddb.com/icon/d2cd33e9c0236a8c2d8bd3fa91ad3acf/32/256x256.png",
+    "progress": 100,
 
     "started": null,
     "finished": null,
@@ -343,6 +352,7 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/f1298750ed09618717f9c10ea8d1d3b0.png",
+    "progress": 100,
 
     "started": null,
     "finished": null,
@@ -363,12 +373,13 @@
   },
 
   {
-    "id": "rac1",
+    "id": "rac13",
     "title": "Ratchet and Clank 3: Up Your Arsenal",
     "status": "Completed",
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon/a36b598abb934e4528412e5a2127b931/32/256x256.png",
+    "progress": 100,
 
     "started": null,
     "finished": null,
@@ -395,6 +406,7 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon/63cdcaf145863d57408d00bafbe9eee9/32/256x256.png",
+    "progress": 100,
 
     "started": null,
     "finished": null,
@@ -420,6 +432,7 @@
     "status": "Completed",
     "rating": 4,
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/b4d168b48157c623fbd095b4a565b5bb.png",
+    "progress": 80,
 
     "started": null,
     "finished": null,
@@ -439,6 +452,7 @@
     "status": "Completed",
     "rating": 3,
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/1c150c70579a81b2b641b4a98de07cf6.png",
+    "progress": 50,
 
     "started": null,
     "finished": null,
@@ -458,6 +472,7 @@
     "status": "Completed",
     "rating": 4,
     "cover": "https://cdn2.unrealengine.com/egs-ratchetclankriftapart-insomniacgames-ic1-400x400-8375c8fb3499.png?resize=1&w=480&h=270&quality=medium",
+    "progress": 60,
 
     "started": "01/11/2024",
     "finished": "01/26/2024",
@@ -477,6 +492,7 @@
     "status": "Completed",
     "rating": 5,
     "cover": "https://cdn2.steamgriddb.com/icon/59b109c700b500daa9ef3a6769bc8c6f.png",
+    "progress": 60,
 
     "started": null,
     "finished": null,
@@ -496,6 +512,7 @@
     "status": "Completed",
     "rating": 5,
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/0b80ddc95bcf9132d2493436a223ca96.png",
+    "progress": 60,
 
     "started": null,
     "finished": null,
@@ -515,6 +532,7 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/1bc60bcdf112703a1b854c14327c301d.png",
+    "progress": 60,
 
     "started": null,
     "finished": null,
@@ -534,6 +552,7 @@
     "status": "Completed",
     "rating": 4,
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/fc83b39f9ff554b393188dbc36e3f835.png",
+    "progress": 50,
 
     "started": null,
     "finished": null,
@@ -560,6 +579,8 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon/b83612231364b4cde46b9282b2d4d054/32/256x256.png",
+    "progress": 50,
+
     "started": null,
     "finished": null,
 
@@ -579,6 +600,8 @@
     "rating": 4,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/d983db47634e1936eb568b79884012ac.png",
+    "progress": 100,
+
     "started": null,
     "finished": null,
 
@@ -598,6 +621,8 @@
     "rating": 5,
     "tags": ["favorite"],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/c7f66351c012165813d0b478effab44d.png",
+    "progress": 60,
+
     "started": null,
     "finished": null,
 
@@ -616,6 +641,7 @@
     "status": "Completed",
     "rating": 4,
     "cover": "https://cdn2.steamgriddb.com/icon/90f1f4972d133619a60c30f3559ec0c5/32/256x256.png",
+    "progress": 90,
 
     "started": null,
     "finished": null,
@@ -635,6 +661,7 @@
     "status": "Completed",
     "rating": 4,
     "cover": "https://cdn2.steamgriddb.com/icon/1e93a9e455f77c12ee3365c92871082b/32/128x128.png",
+    "progress": 100,
 
     "started": null,
     "finished": null,
@@ -654,6 +681,7 @@
     "status": "Completed",
     "rating": 4,
     "cover": "https://cdn2.steamgriddb.com/icon/e0d1b5ce9153ef8740cff2ad288b5b53/32/128x128.png",
+    "progress": 40,
 
     "started": null,
     "finished": null,
@@ -673,6 +701,7 @@
     "status": "Completed",
     "rating": 4,
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/393a0f103dfdc3798cf1cfc2e7bdbc1f.png",
+    "progress": 100,
 
     "started": null,
     "finished": null,
