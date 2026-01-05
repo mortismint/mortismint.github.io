@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="mocha">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveSplit Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>LiveSplit .lss Analyzer</h1>
+        <p class="subtitle">
+          Upload a .lss file to compute per-segment timesave and find biggest
+          potential save.
+        </p>
+      </header>
+
+      <section class="controls">
+        <label class="file-label">
+          Choose .lss file
+          <input id="fileInput" type="file" accept=".lss,.xml" />
+        </label>
+
+        <div class="mode">
+          <div class="time-toggle">
+            <span class="label left">Real Time</span>
+
+            <input type="checkbox" id="timeToggle" />
+            <label for="timeToggle" class="toggleSwitch"></label>
+
+            <span class="label right">Game Time</span>
+          </div>
+        </div>
+
+        <div id="fileName" class="file-name">No file selected</div>
+        <label class="file-label">
+          Top saves:
+          <input id="summaryCount" type="number" min="1" max="21" value="3" />
+        </label>
+      </section>
+
+      <section id="results" class="results" aria-live="polite"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
