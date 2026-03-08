@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="mocha">
   <head>
     <meta charset="UTF-8" />
@@ -40,9 +40,21 @@
         </label>
       </section>
 
+      <section
+        id="statsGrid"
+        class="stats-grid"
+        style="display: none"
+      ></section>
+      <section id="chartSection" class="chart-section" style="display: none">
+        <div class="chart-title">
+          Run progression — completed runs over time
+        </div>
+        <div class="chart-canvas-wrap">
+          <canvas id="progressChart"></canvas>
+        </div>
+      </section>
       <section id="results" class="results" aria-live="polite"></section>
     </main>
-
     <script src="script.js"></script>
   </body>
 </html>

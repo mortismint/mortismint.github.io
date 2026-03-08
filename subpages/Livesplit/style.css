@@ -4,7 +4,11 @@
 }
 body {
   margin: 0;
-  font-family: Inter, Segoe UI, Arial, sans-serif;
+  font-family:
+    Inter,
+    Segoe UI,
+    Arial,
+    sans-serif;
   background: var(--base);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
@@ -175,7 +179,9 @@ input#timeToggle:checked + .toggleSwitch::after {
   gap: 8px;
   flex-wrap: wrap;
   align-items: flex-start;
-  transition: gap 220ms ease, transform 220ms ease;
+  transition:
+    gap 220ms ease,
+    transform 220ms ease;
 }
 .summary-item {
   background: rgba(255, 255, 255, 0.02);
@@ -185,7 +191,10 @@ input#timeToggle:checked + .toggleSwitch::after {
   max-width: 320px;
   min-width: 150px;
   box-sizing: border-box;
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
 }
 .summary-item:hover {
   transform: translateY(-4px);
@@ -214,6 +223,92 @@ input#timeToggle:checked + .toggleSwitch::after {
 .flash {
   box-shadow: 0 0 0 3px rgba(148, 226, 213, 0.12);
   transition: box-shadow 0.2s ease;
+}
+
+/* ── Stats panels ── */
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.stat-card {
+  background: var(--surface0);
+  border-radius: 10px;
+  padding: 12px 16px;
+  flex: 1 1 140px;
+  min-width: 120px;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--subtext0);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+.stat-sub {
+  font-size: 11px;
+  color: var(--subtext1);
+  margin-top: 2px;
+}
+.stat-card.highlight .stat-value {
+  color: var(--teal);
+}
+.stat-card.gold .stat-value {
+  color: var(--yellow);
+}
+.stat-card.warn .stat-value {
+  color: var(--peach);
+}
+
+/* ── Progression chart ── */
+.chart-section {
+  background: var(--surface0);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.chart-title {
+  font-size: 12px;
+  color: var(--subtext0);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+.chart-canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 160px;
+}
+canvas#progressChart {
+  width: 100% !important;
+  height: 160px !important;
+  display: block;
+}
+
+/* ── Avg column badge ── */
+.avg-faster {
+  color: var(--green);
+  font-weight: 600;
+}
+.avg-slower {
+  color: var(--red);
+  font-weight: 600;
+}
+.avg-only {
+  color: var(--subtext1);
 }
 
 .small {
@@ -250,7 +345,9 @@ input#timeToggle:checked + .toggleSwitch::after {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 180ms ease, transform 120ms ease;
+  transition:
+    background 180ms ease,
+    transform 120ms ease;
   outline: none;
 }
 
