@@ -2,13 +2,12 @@
   {
     "id": "skyrim-5",
     "title": "The Elder Scrolls V: Skyrim Special Edition",
-    "status": "Playing",
+    "status": "Paused",
     "rating": 0,
     "tags": [],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/44ddf432eb6704a14abb1e3445a52436.png",
     "lastPlayed": "2025-03-12",
 
-    "started": "12/06/2025",
     "finished": null,
     "progress": 40,
 
@@ -22,11 +21,54 @@
   },
 
   {
+    "id": "terraria-ieor",
+    "title": "Terraria - Infernal Eclipse of Ragnarok",
+    "status": "Playing",
+    "rating": 0,
+    "tags": [],
+    "cover": "https://images.steamusercontent.com/ugc/14250407555850626432/79B8A4968EF7429C54E0A913EDEB6E606E46C27D/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+    "lastPlayed": "Unknown",
+
+    "finished": null,
+    "progress": 10,
+
+    "genres": ["Action", "Adventure", "Indie", "RPG"],
+    "console": "PC",
+    "playtime": null,
+    "release": 2025,
+    "dlc": ["none"],
+
+    "notes": ""
+  },
+
+  {
+    "id": "ron",
+    "title": "Ready or Not",
+    "status": "Playing",
+    "rating": 0,
+    "tags": [],
+    "cover": "https://cdn2.steamgriddb.com/icon_thumb/4cb6d7ff8b8df183c0cd878ca9640b22.png",
+    "lastPlayed": "2026-03-13",
+
+    "started": "04/03/2026",
+    "finished": null,
+    "progress": 80,
+
+    "genres": ["Tactical", "FPS", "Shooter", "Action"],
+    "console": "PC",
+    "playtime": 12,
+    "release": 2021,
+    "dlc": ["Home Invasion", "Dark Waters"],
+
+    "notes": ""
+  },
+
+  {
     "id": "nier-automata",
     "title": "NieR:Automata",
     "status": "Planning",
     "rating": 0,
-    "cover": "https://cdn2.steamgriddb.com/icon_thumb/8ea40402d86c45e1763290987873772c.png",
+    "cover": "https://cdn2.steamgriddb.com/icon/db29450c3f5e97f97846693611f98c15/8/256x256.png",
 
     "started": null,
     "finished": null,

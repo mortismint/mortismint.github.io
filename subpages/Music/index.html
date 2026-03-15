@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" class="mocha">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,53 +7,104 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Upload Guidelines</h1>
-    </header>
-    <div class="container-guidelines">
-      <h2>Guidelines</h2>
-      <p>
-        Please only reupload my music to services like
-        <a href="https://soundcloud.com" class="link">SoundCloud</a> or
-        <a href="https://youtube.com" class="link">YouTube</a>. Avoid using
-        commerical platforms such as Spotify or Apple Music for reuploads.
-      </p>
-      <p>
-        If you reupload to any commerical platform, you're violating the license
-        terms of my music, which is released under a Creative Commons (CC)
-        Attribution (NON COMMERICAL) license. This means you must give
-        appropriate credit, by providing: title, author and source (link) of the
-        track alongside the liscense type. More info can be found here:
-        <a
-          href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
-          class="link"
-          >Creative Commons License</a
-        >.
-      </p>
-      <p style="font-weight: bold">
-        Failure to follow these guidelines may result in a copyright takedown.
-      </p>
+    <div class="page">
+      <a href="../../index.html" class="back">back to home</a>
+
+      <header>
+        <p class="header-eyebrow">mortismint · music</p>
+        <h1>upload <span>guidelines</span></h1>
+        <p class="header-sub">
+          everything you need to know before sharing my music.
+        </p>
+      </header>
+
+      <div class="rule"></div>
+
+      <!-- License card -->
+      <div class="card">
+        <p class="card-title">
+          <span class="icon icon-license">♪</span>
+          License &amp; Permissions
+          <span class="chip">CC BY-NC-SA 4.0</span>
+        </p>
+        <div class="card-divider"></div>
+        <p>
+          You're welcome to reupload my music to free platforms like
+          <a href="https://soundcloud.com" class="link">SoundCloud</a> or
+          <a href="https://youtube.com" class="link">YouTube</a>. Please
+          <strong>do not</strong> upload to commercial platforms such as
+          <em>Spotify</em> or <em>Apple Music</em> — doing so violates the
+          <a
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
+            class="link"
+            >Creative Commons BY-NC-SA license</a
+          >
+          my music is released under.
+        </p>
+        <p>
+          When reuploading, you <strong>must</strong> give appropriate credit —
+          include the track <strong>title</strong>, <strong>author</strong>, and
+          a <strong>source link</strong> to the original alongside the license
+          type.
+        </p>
+        <div class="warning">
+          <span class="warning-icon">⚠</span>
+          <p>
+            Failure to follow these guidelines may result in a copyright
+            takedown.
+          </p>
+        </div>
+      </div>
+
+      <!-- YouTube card -->
+      <div class="card">
+        <p class="card-title">
+          <span class="icon icon-yt">▶</span>
+          YouTube Guidelines
+        </p>
+        <div class="card-divider"></div>
+        <p>
+          Include the following in your video description when reuploading. Copy
+          the template below:
+        </p>
+        <div class="yt-template">
+          <div>
+            <span class="label">► Track Title:</span>
+            <span class="placeholder"
+              >[Insert Track Title Here] + link to track</span
+            >
+          </div>
+          <div>
+            <span class="label">► YouTube:</span>
+            <span class="val">www.youtube.com/@-MortisMusic</span>
+          </div>
+          <div>
+            <span class="label">► SoundCloud:</span>
+            <span class="val">@mortismint</span>
+          </div>
+          <div>
+            <span class="label">► Spotify:</span>
+            <span class="val"
+              >open.spotify.com/artist/1izvlY80La78ry7SZzHr2x</span
+            >
+          </div>
+          <div>
+            <span class="label">► E-Mail:</span>
+            <span class="val">mortismusic.contact@gmail.com</span>
+          </div>
+        </div>
+        <p style="margin-top: 16px">
+          You may change the video title, but it <strong>must</strong> include
+          <em>[Mortis Frenchcore]</em> either at the start or end.
+        </p>
+      </div>
     </div>
-    <div class="container-yt">
-      <h2>YouTube Guidelines</h2>
-      <p>
-        When reuploading my music, please include the following in the
-        description of the video.
-        <br /><br />
-        ► Track Title: [Insert Track Title Here] + Link to the track
-        <br />► YouTube: <a class="link-cl">www.youtube.com/@-MortisMusic</a>
-        <br />► SoundCloud: <a class="link-cl">@mortismint</a> <br />► Spotify:
-        <a class="link-cl">open.spotify.com/artist/1izvlY80La78ry7SZzHr2x</a>
-        <br />► E-Mail: <a class="link-cl">mortismusic.contact@gmail.com</a>
-      </p>
-      <p>
-        As for the title, you can change it BUT it <strong>must</strong> include
-        [Mortis Frenchcore] either at the start or end of the title.
-      </p>
-    </div>
+    <!-- /.page -->
+
     <footer>
-      <p>© 2025 Mortismint. All rights reserved.</p>
+      <p>© 2026 Mortismint. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
