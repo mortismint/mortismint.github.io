@@ -1,2 +1,2 @@
 # mortismint.github.io
-Website for literally no use lol
+Website for a bit of an use
