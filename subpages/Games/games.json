@@ -21,10 +21,32 @@
   },
 
   {
-    "id": "terraria-ieor",
-    "title": "Terraria - Infernal Eclipse of Ragnarok",
+    "id": "FFS:I",
+    "title": "Firefighting Simulator: Ignite",
     "status": "Playing",
     "rating": 0,
+    "tags": [],
+    "cover": "https://cdn2.steamgriddb.com/thumb/780d49f6bb25e31070dc13b7d9d05a8c.jpg",
+    "lastPlayed": "2025-04-04",
+
+    "started": "2025-04-01",
+    "finished": null,
+    "progress": 40,
+
+    "genres": ["Action,", "Simulation", "Indie"],
+    "console": "PC",
+    "playtime": 7,
+    "release": 2016,
+    "dlc": null,
+
+    "notes": ""
+  },
+
+  {
+    "id": "terraria-ieor",
+    "title": "Terraria - Infernal Eclipse of Ragnarok",
+    "status": "Dropped",
+    "rating": 3.5,
     "tags": [],
     "cover": "https://images.steamusercontent.com/ugc/14250407555850626432/79B8A4968EF7429C54E0A913EDEB6E606E46C27D/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
     "lastPlayed": "Unknown",
@@ -34,33 +56,33 @@
 
     "genres": ["Action", "Adventure", "Indie", "RPG"],
     "console": "PC",
-    "playtime": null,
+    "playtime": 5,
     "release": 2025,
     "dlc": ["none"],
 
-    "notes": ""
+    "notes": "Unfortunately had to drop it due to performance issues. I was really looking forward to it, but it just wasn't playable with around 30-40 FPS."
   },
 
   {
     "id": "ron",
     "title": "Ready or Not",
-    "status": "Playing",
-    "rating": 0,
+    "status": "Completed",
+    "rating": 4,
     "tags": [],
     "cover": "https://cdn2.steamgriddb.com/icon_thumb/4cb6d7ff8b8df183c0cd878ca9640b22.png",
-    "lastPlayed": "2026-03-13",
+    "lastPlayed": "2026-03-28",
 
     "started": "04/03/2026",
-    "finished": null,
-    "progress": 80,
+    "finished": "28/03/2026",
+    "progress": 100,
 
     "genres": ["Tactical", "FPS", "Shooter", "Action"],
     "console": "PC",
-    "playtime": 12,
+    "playtime": 18,
     "release": 2021,
     "dlc": ["Home Invasion", "Dark Waters"],
 
-    "notes": ""
+    "notes": "Lowkey, still one of the greatest SWAT games made. "
   },
 
   {
