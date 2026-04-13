@@ -1,0 +1,227 @@
+{
+  "generated": "2026-04-13T14:41:39.035Z",
+  "event": "Mint-A-Thon",
+  "twitch": "https://www.twitch.tv/mintathonlive",
+  "timezone": "Europe/Berlin",
+  "break_mins": 10,
+  "days": [
+    {
+      "day": "Friday",
+      "window": "3:00 PM – 3:36 AM",
+      "runs": [
+        {
+          "start_time": "3:00 PM",
+          "game": "God of War",
+          "category": "Easy Glitchless",
+          "platform": "PlayStation 3",
+          "runner": "thesadgebean",
+          "estimate": "3:25:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/thesadgebean"
+        },
+        {
+          "start_time": "6:35 PM",
+          "game": "Undertale",
+          "category": "True Pacifist Ending",
+          "platform": "PC",
+          "runner": "Freax",
+          "estimate": "1:36:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/freaxieee"
+        },
+        {
+          "start_time": "8:21 PM",
+          "game": "Ratchet & Clank: Up Your Arsenal",
+          "category": "100%",
+          "platform": "PlayStation 3",
+          "runner": "Mathias4595",
+          "estimate": "4:40:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/mathias4595"
+        },
+        {
+          "start_time": "1:11 AM",
+          "game": "Gex 3: Deep Cover Gecko",
+          "category": "100%",
+          "platform": "PlayStation",
+          "runner": "crash6351",
+          "estimate": "2:15:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/crash6351"
+        }
+      ]
+    },
+    {
+      "day": "Saturday",
+      "window": "3:00 PM – 3:14 AM",
+      "runs": [
+        {
+          "start_time": "3:00 PM",
+          "game": "Ratchet & Clank (2002)",
+          "category": "any%",
+          "platform": "PlayStation 3",
+          "runner": "Dezmone",
+          "estimate": "35:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/dezmone"
+        },
+        {
+          "start_time": "3:45 PM",
+          "game": "Batman Arkham Asylum",
+          "category": "Any%",
+          "platform": "PlayStation 5",
+          "runner": "itzpaige__",
+          "estimate": "1:40:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/itzpaige__"
+        },
+        {
+          "start_time": "5:35 PM",
+          "game": "Ridge Racer 64",
+          "category": "Grand Prix All Gold Trophies",
+          "platform": "Nintendo 64",
+          "runner": "Torpadorp",
+          "estimate": "1:25:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/torpadorp"
+        },
+        {
+          "start_time": "7:10 PM",
+          "game": "Jak X: Combat Racing™",
+          "category": "All Cups w/ Skips",
+          "platform": "PlayStation 2",
+          "runner": "iScarly",
+          "estimate": "40:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/iscarly"
+        },
+        {
+          "start_time": "8:00 PM",
+          "game": "Jak 3 OpenGOAL",
+          "category": "All Missions Act 1",
+          "platform": "PC",
+          "runner": "majora12",
+          "estimate": "1:20:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/majora12"
+        },
+        {
+          "start_time": "9:30 PM",
+          "game": "Hard Corps: Uprising",
+          "category": "FF7 Rising Mode Ballet: Sayuri",
+          "platform": "Xbox Series X",
+          "runner": "AntiAaron",
+          "estimate": "47:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/antiaaron"
+        },
+        {
+          "start_time": "10:27 PM",
+          "game": "Cyberpunk 2077",
+          "category": "Title Screen",
+          "platform": "Switch 2",
+          "runner": "TK PH03N1X",
+          "estimate": "1:30:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/tkph03n1x"
+        },
+        {
+          "start_time": "12:07 AM",
+          "game": "Crash Team Racing",
+          "category": "Any% No Major Glitches (Classic)",
+          "platform": "PlayStation 2",
+          "runner": "PinstripeDz7",
+          "estimate": "55:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/pinstripedz7"
+        },
+        {
+          "start_time": "1:12 AM",
+          "game": "Super Mario Odyssey",
+          "category": "All Story Moons",
+          "platform": "Switch 2",
+          "runner": "CheeseJay",
+          "estimate": "1:25:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/cheesejay"
+        },
+        {
+          "start_time": "2:47 AM",
+          "game": "The Hobbit",
+          "category": "Any% (No Menu Glitches)",
+          "platform": "PC",
+          "runner": "sauci",
+          "estimate": "17:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/sauci"
+        }
+      ]
+    },
+    {
+      "day": "Sunday",
+      "window": "3:00 PM – 9:58 PM",
+      "runs": [
+        {
+          "start_time": "3:00 PM",
+          "game": "LEGO Builder's Journey",
+          "category": "Robot's Adventure Any%",
+          "platform": "PC",
+          "runner": "juesto",
+          "estimate": "24:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/juesto"
+        },
+        {
+          "start_time": "3:34 PM",
+          "game": "Ratchet  Clank: Going Commando",
+          "category": "Max%",
+          "platform": "PlayStation 3",
+          "runner": "imeli_tm",
+          "estimate": "2:32:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/imeli_tm"
+        },
+        {
+          "start_time": "6:16 PM",
+          "game": "Bad Way",
+          "category": "Any% (No Torch Zip)",
+          "platform": "PC",
+          "runner": "pbb8",
+          "estimate": "30:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/pbb8"
+        },
+        {
+          "start_time": "6:56 PM",
+          "game": "Colin McRae Rally",
+          "category": "Championship (Novice)",
+          "platform": "PC",
+          "runner": "ViperUK",
+          "estimate": "1:00:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/viperuk"
+        },
+        {
+          "start_time": "8:06 PM",
+          "game": "Tomb Raider IV-VI Remastered",
+          "category": "Tomb Raider V (Any%, Glitched)",
+          "platform": "PC",
+          "runner": "Schedar",
+          "estimate": "55:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/schedar"
+        },
+        {
+          "start_time": "9:11 PM",
+          "game": "Hello Kitty: Roller Rescue",
+          "category": "Any% (Hello Kitty)",
+          "platform": "GameCube",
+          "runner": "LinkaMeister",
+          "estimate": "37:00",
+          "commentator": null,
+          "twitch": "https://www.twitch.tv/linkameister"
+        }
+      ]
+    }
+  ]
+}

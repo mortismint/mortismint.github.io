@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mint-A-Thon 2026</title>
+    <meta
+      name="description"
+      content="Speedrun marathon — full schedule with local times."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <!-- Loading -->
+    <div id="loadingScreen">
+      <div class="spinner"></div>
+      <div class="load-word">Loading…</div>
+    </div>
+
+    <!-- Error -->
+    <div id="errorScreen">
+      <div style="font-size: 2.5rem">⚡</div>
+      <div
+        style="
+          font-family: &quot;Bebas Neue&quot;, sans-serif;
+          font-size: 2rem;
+          letter-spacing: 0.1em;
+          color: var(--red);
+        "
+      >
+        Schedule Not Found
+      </div>
+      <div
+        style="
+          font-family: &quot;Space Mono&quot;, monospace;
+          font-size: 11px;
+          color: var(--overlay1);
+          max-width: 400px;
+          line-height: 1.8;
+          text-align: center;
+        "
+      >
+        Drop
+        <code
+          style="
+            background: var(--surface0);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--peach);
+          "
+          >schedule.json</code
+        >
+        (exported from the Schedule tool) into this folder, then serve with
+        <code
+          style="
+            background: var(--surface0);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--peach);
+          "
+          >python server.py</code
+        >
+      </div>
+    </div>
+
+    <!-- Main page -->
+    <div id="page">
+      <!-- ── HERO ── -->
+      <section class="hero">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="hero-stripe"></div>
+
+        <div class="hero-inner">
+          <div class="hero-tag">Speedrun Marathon</div>
+          <h1 class="hero-title">Mint-A-THON</h1>
+          <div class="hero-bottom">
+            <p class="hero-desc">
+              <strong id="runCount">—</strong> runs across
+              <strong>3 days</strong>.<br />
+              Times shown in <strong id="localTzName">your timezone</strong>
+              alongside original CET.
+            </p>
+            <div class="hero-tz-badge">
+              <span class="tz-icon">🌍</span>
+              <div class="tz-info">
+                <span class="tz-info-label">Your timezone</span>
+                <span class="tz-info-value" id="tzBadgeValue">Detecting…</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-scroll">
+          <div class="hero-scroll-arrow"></div>
+          scroll
+        </div>
+        <div class="runner-links">
+          Click the runner name to get to their Twitch profile
+        </div>
+      </section>
+
+      <!-- ── Day nav tabs ── -->
+      <nav class="day-nav">
+        <div class="day-nav-inner" id="dayTabs"></div>
+      </nav>
+
+      <!-- ── Schedule ── -->
+      <div class="schedule-wrap" id="scheduleWrap"></div>
+
+      <!-- ── Footer ── -->
+      <footer class="site-footer">
+        <div class="footer-left">
+          <span
+            >All times originally in
+            <strong style="color: var(--text)">CET (UTC+1)</strong></span
+          >
+          <span
+            >Your local time shown in
+            <strong style="color: var(--teal)" id="footerTz">—</strong></span
+          >
+        </div>
+        <div class="footer-right">© 2026 Mint-A-Thon</div>
+      </footer>
+    </div>
+  </body>
+  <script src="./assets/script.js"></script>
+</html>
