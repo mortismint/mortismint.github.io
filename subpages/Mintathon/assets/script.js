@@ -1,11 +1,5 @@
 let CET_TZ = "Europe/Berlin";
 
-const DAY_DATE = {
-  Friday: "2025-01-10",
-  Saturday: "2025-01-11",
-  Sunday: "2025-01-12",
-};
-
 const DAY_CLASS = {
   Friday: "friday",
   Saturday: "saturday",
@@ -41,28 +35,116 @@ async function boot() {
 }
 
 // Time helpers
-function parseCET(timeStr, dayName) {
-  const date = DAY_DATE[dayName] || DAY_DATE.Friday;
+function parse12HourTime(timeStr) {
   const m = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
   if (!m) return null;
-  let h = parseInt(m[1]),
-    min = parseInt(m[2]);
-  if (m[3].toUpperCase() === "PM" && h !== 12) h += 12;
-  if (m[3].toUpperCase() === "AM" && h === 12) h = 0;
+
+  let h = parseInt(m[1], 10);
+  const min = parseInt(m[2], 10);
+  const ampm = m[3].toUpperCase();
+
+  if (ampm === "PM" && h !== 12) h += 12;
+  if (ampm === "AM" && h === 12) h = 0;
+
+  return {
+    h24: h,
+    min,
+    totalMinutes: h * 60 + min,
+  };
+}
+
+function buildDayDateMap() {
+  const generated = scheduleData?.generated
+    ? new Date(scheduleData.generated)
+    : new Date();
+
+  const base = new Date(
+    Date.UTC(
+      generated.getUTCFullYear(),
+      generated.getUTCMonth(),
+      generated.getUTCDate(),
+    ),
+  );
+
+  const weekdayIndex = {
+    Sunday: 0,
+    Monday: 1,
+    Tuesday: 2,
+    Wednesday: 3,
+    Thursday: 4,
+    Friday: 5,
+    Saturday: 6,
+  };
+
+  const out = {};
+  for (const d of scheduleData.days) {
+    const target = weekdayIndex[d.day];
+    const current = base.getUTCDay();
+    let delta = (target - current + 7) % 7;
+    if (delta === 0) delta = 7;
+
+    const actual = new Date(base);
+    actual.setUTCDate(base.getUTCDate() + delta);
+    out[d.day] = actual;
+  }
+
+  return out;
+}
+
+function zonedTimeToUtc(dateObjUtc, h, min, tz) {
+  const y = dateObjUtc.getUTCFullYear();
+  const m = dateObjUtc.getUTCMonth() + 1;
+  const d = dateObjUtc.getUTCDate();
 
   const naiveUtc = new Date(
-    `${date}T${String(h).padStart(2, "0")}:${String(min).padStart(2, "0")}:00Z`,
+    `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}T${String(h).padStart(2, "0")}:${String(min).padStart(2, "0")}:00Z`,
   );
-  const cetParts = new Intl.DateTimeFormat("en-US", {
-    timeZone: CET_TZ,
-    hour: "numeric",
+
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: tz,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
     minute: "2-digit",
     hour12: false,
   }).formatToParts(naiveUtc);
-  const cetH = parseInt(cetParts.find((p) => p.type === "hour").value);
-  const cetMin = parseInt(cetParts.find((p) => p.type === "minute").value);
-  const diff = h * 60 + min - (cetH * 60 + cetMin);
-  return new Date(naiveUtc.getTime() - diff * 60000);
+
+  const tzYear = parseInt(parts.find((p) => p.type === "year").value, 10);
+  const tzMonth = parseInt(parts.find((p) => p.type === "month").value, 10);
+  const tzDay = parseInt(parts.find((p) => p.type === "day").value, 10);
+  const tzHour = parseInt(parts.find((p) => p.type === "hour").value, 10);
+  const tzMinute = parseInt(parts.find((p) => p.type === "minute").value, 10);
+
+  const desiredUtcMs = Date.UTC(y, m - 1, d, h, min);
+  const observedUtcMs = Date.UTC(tzYear, tzMonth - 1, tzDay, tzHour, tzMinute);
+  const diffMinutes = (desiredUtcMs - observedUtcMs) / 60000;
+
+  return new Date(naiveUtc.getTime() + diffMinutes * 60000);
+}
+
+function buildRunDates(day) {
+  const dayDateMap = buildDayDateMap();
+  const baseDate = dayDateMap[day.day];
+  if (!baseDate) return [];
+
+  let rolloverDays = 0;
+  let prevMinutes = -1;
+
+  return day.runs.map((run) => {
+    const parsed = parse12HourTime(run.start_time);
+    if (!parsed) return null;
+
+    if (prevMinutes !== -1 && parsed.totalMinutes < prevMinutes) {
+      rolloverDays += 1;
+    }
+    prevMinutes = parsed.totalMinutes;
+
+    const actualDate = new Date(baseDate);
+    actualDate.setUTCDate(baseDate.getUTCDate() + rolloverDays);
+
+    return zonedTimeToUtc(actualDate, parsed.h24, parsed.min, CET_TZ);
+  });
 }
 
 /** Format a Date in a given IANA timezone as "3:00 PM" */
@@ -80,7 +162,7 @@ function fmt(date, tz) {
   }
 }
 
-/** Short timezone abbreviation, e.g. "CET", "PST" */
+/** Short timezone abbreviation, e.g. "CET", "CEST", "PDT" */
 function tzAbbr(tz, date) {
   try {
     return (
@@ -144,8 +226,9 @@ function render() {
 
   // Update footer "originally in X" label dynamically
   const origTzEl = document.querySelector(".footer-left span:first-child");
-  if (origTzEl)
+  if (origTzEl) {
     origTzEl.innerHTML = `All times originally in <strong style="color:var(--text)">${schedTzAbbr}</strong>`;
+  }
 
   // Day tabs
   const tabsEl = document.getElementById("dayTabs");
@@ -169,10 +252,9 @@ function render() {
 
   scheduleData.days.forEach((day) => {
     const cls = DAY_CLASS[day.day] || "friday";
-    const firstRun = day.runs[0];
-    const lastRun = day.runs[day.runs.length - 1];
-    const firstUtc = firstRun ? parseCET(firstRun.start_time, day.day) : null;
-    const lastUtc = lastRun ? parseCET(lastRun.start_time, day.day) : null;
+    const runDates = buildRunDates(day);
+    const firstUtc = runDates[0] || null;
+    const lastUtc = runDates[runDates.length - 1] || null;
 
     const section = document.createElement("section");
     section.className = "day-section";
@@ -222,7 +304,7 @@ function render() {
         list.appendChild(bm);
       }
 
-      const utcDate = parseCET(run.start_time, day.day);
+      const utcDate = runDates[ri];
       const origStr = run.start_time;
       const localStr = utcDate ? fmt(utcDate, localTz) : "—";
 
