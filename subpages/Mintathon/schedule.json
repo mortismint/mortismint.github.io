@@ -57,16 +57,16 @@
       "runs": [
         {
           "start_time": "3:00 PM",
-          "game": "Ratchet & Clank (2002)",
-          "category": "any%",
-          "platform": "PlayStation 3",
-          "runner": "Dezmone",
-          "estimate": "35:00",
+          "game": "Ridge Racer 64",
+          "category": "Grand Prix All Gold Trophies",
+          "platform": "Nintendo 64",
+          "runner": "Torpadorp",
+          "estimate": "1:25:00",
           "commentator": null,
-          "twitch": "https://www.twitch.tv/dezmone"
+          "twitch": "https://www.twitch.tv/torpadorp"
         },
         {
-          "start_time": "3:45 PM",
+          "start_time": "4:35 PM",
           "game": "Batman Arkham Asylum",
           "category": "Any%",
           "platform": "PlayStation 5",
@@ -76,14 +76,14 @@
           "twitch": "https://www.twitch.tv/itzpaige__"
         },
         {
-          "start_time": "5:35 PM",
-          "game": "Ridge Racer 64",
-          "category": "Grand Prix All Gold Trophies",
-          "platform": "Nintendo 64",
-          "runner": "Torpadorp",
-          "estimate": "1:25:00",
+          "start_time": "6:25 PM",
+          "game": "Ratchet & Clank (2002)",
+          "category": "any%",
+          "platform": "PlayStation 3",
+          "runner": "Dezmone",
+          "estimate": "35:00",
           "commentator": null,
-          "twitch": "https://www.twitch.tv/torpadorp"
+          "twitch": "https://www.twitch.tv/dezmone"
         },
         {
           "start_time": "7:10 PM",
