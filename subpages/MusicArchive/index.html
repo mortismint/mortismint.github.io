@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>track archive · mortismint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <nav>
+        <a href="https://mortismint.github.io/">mortismint</a>
+        <span class="sep">/</span>
+        <span>track archive</span>
+      </nav>
+
+      <header class="header-glow">
+        <h1>every track<br />i've <span>ever made</span></h1>
+        <p class="header-sub">
+          a full chronological archive of released and unreleased productions.
+          some are lost to the void, which are marked accordingly.
+        </p>
+        <div class="stats-row">
+          <div class="stat">
+            <span class="stat-num" id="stat-total">—</span>
+            <span class="stat-label">tracks</span>
+          </div>
+          <div class="divider"></div>
+          <div class="stat">
+            <span class="stat-num" id="stat-available">—</span>
+            <span class="stat-label">downloadable</span>
+          </div>
+          <div class="divider"></div>
+          <div class="stat">
+            <span class="stat-num" id="stat-lost">—</span>
+            <span class="stat-label">lost media</span>
+          </div>
+          <div class="divider"></div>
+          <div class="stat">
+            <span class="stat-num" id="stat-span">—</span>
+            <span class="stat-label">years</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="archive" id="archive">
+          <div class="empty-state">loading archive…</div>
+        </div>
+      </main>
+
+      <div class="license-card">
+        <p class="license-title">
+          <span class="license-icon">♪</span>
+          license &amp; permissions
+          <span class="license-chip">CC BY-NC-SA 4.0</span>
+        </p>
+        <div class="license-divider"></div>
+        <div class="license-body">
+          <p>
+            you're welcome to reupload my music to free platforms like
+            <a href="https://soundcloud.com">SoundCloud</a> or
+            <a href="https://youtube.com">YouTube</a>. please
+            <strong>do not</strong> upload to commercial platforms such as
+            <em>Spotify</em> or <em>Apple Music</em> — doing so violates the
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
+              >Creative Commons BY-NC-SA license</a
+            >
+            my music is released under.
+          </p>
+          <p>
+            when reuploading, you <strong>must</strong> give appropriate credit
+            — include the track <strong>title</strong>, <strong>author</strong>,
+            and a <strong>source link</strong> to the original alongside the
+            license type.
+          </p>
+          <div class="license-warning">
+            <span class="license-warning-icon">⚠</span>
+            <p>
+              failure to follow these guidelines may result in a copyright
+              takedown.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <span>© 2026 mortismint</span>
+        <a href="https://mortismint.github.io/">← back to main</a>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
