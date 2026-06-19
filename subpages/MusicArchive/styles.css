@@ -378,6 +378,17 @@ h1 span {
   color: #d8b4fe;
 }
 
+.yt-btn {
+  color: #e88a8a;
+  background: rgba(232, 138, 138, 0.08);
+  border: 1px solid rgba(232, 138, 138, 0.25);
+}
+.yt-btn:hover {
+  background: rgba(232, 138, 138, 0.16);
+  border-color: rgba(232, 138, 138, 0.5);
+  color: #f2a8a8;
+}
+
 .empty-state {
   text-align: center;
   padding: 4rem 1rem;
@@ -509,4 +520,10 @@ footer a:hover {
   h1 {
     font-size: 2rem;
   }
+}
+
+.footer-middle {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
 }

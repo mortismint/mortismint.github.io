@@ -70,6 +70,14 @@ function renderTrack(track, index) {
     btn.rel = "noopener noreferrer";
     btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>mp3`;
     li.appendChild(btn);
+  } else if (track.youtubeUrl) {
+    const btn = document.createElement("a");
+    btn.className = "dl-btn yt-btn";
+    btn.href = track.youtubeUrl;
+    btn.target = "_blank";
+    btn.rel = "noopener noreferrer";
+    btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>watch`;
+    li.appendChild(btn);
   } else {
     const ph = document.createElement("span");
     ph.style.width = "68px";
@@ -149,13 +157,15 @@ async function init() {
 
     const allTracks = sorted.flatMap((e) => e.tracks);
     const lostTracks = allTracks.filter((t) => t.lost).length;
+    const downloadableTracks = allTracks.filter(
+      (t) => !t.lost && t.driveUrl,
+    ).length;
     const years = sorted.map((e) => e.year);
     const span =
       years.length > 1 ? Math.max(...years) - Math.min(...years) + 1 : 1;
 
     document.getElementById("stat-total").textContent = allTracks.length;
-    document.getElementById("stat-available").textContent =
-      allTracks.length - lostTracks;
+    document.getElementById("stat-available").textContent = downloadableTracks;
     document.getElementById("stat-lost").textContent = lostTracks;
     document.getElementById("stat-span").textContent = span;
 
