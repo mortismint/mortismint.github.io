@@ -1,3 +1,10 @@
+const state = {
+  search: "",
+  genre: null,
+};
+
+let sortedData = [];
+
 function getUniqueGenres(tracks) {
   return [...new Set(tracks.map((t) => t.genre).filter(Boolean))];
 }
@@ -10,7 +17,34 @@ function makeDownloadUrl(driveUrl) {
   return driveUrl;
 }
 
-function renderTrack(track, index) {
+function trackMatches(track) {
+  const matchesGenre = !state.genre || track.genre === state.genre;
+  const matchesSearch =
+    !state.search || track.title.toLowerCase().includes(state.search);
+  return matchesGenre && matchesSearch;
+}
+
+function escapeHtml(str) {
+  return str.replace(
+    /[&<>"']/g,
+    (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
+        c
+      ],
+  );
+}
+
+function highlightText(text, term) {
+  if (!term) return escapeHtml(text);
+  const idx = text.toLowerCase().indexOf(term);
+  if (idx === -1) return escapeHtml(text);
+  const before = text.slice(0, idx);
+  const match = text.slice(idx, idx + term.length);
+  const after = text.slice(idx + term.length);
+  return `${escapeHtml(before)}<mark>${escapeHtml(match)}</mark>${escapeHtml(after)}`;
+}
+
+function renderTrack(track, index, searchTerm) {
   const li = document.createElement("li");
   li.className = "track-item" + (track.lost ? " is-lost" : "");
 
@@ -23,7 +57,7 @@ function renderTrack(track, index) {
 
   const titleEl = document.createElement("span");
   titleEl.className = "track-title";
-  titleEl.textContent = track.title;
+  titleEl.innerHTML = highlightText(track.title, searchTerm);
 
   const subEl = document.createElement("span");
   subEl.className = "track-sub";
@@ -87,15 +121,15 @@ function renderTrack(track, index) {
   return li;
 }
 
-function renderEra(eraData) {
+function renderEra(eraData, filteredTracks, forceOpen) {
   const div = document.createElement("div");
-  div.className = "era";
+  div.className = "era" + (forceOpen ? " open" : "");
 
-  const genres = getUniqueGenres(eraData.tracks);
+  const genres = getUniqueGenres(filteredTracks);
 
   const btn = document.createElement("button");
   btn.className = "era-header";
-  btn.setAttribute("aria-expanded", "false");
+  btn.setAttribute("aria-expanded", String(forceOpen));
 
   const yearEl = document.createElement("span");
   yearEl.className = "era-year";
@@ -107,8 +141,7 @@ function renderEra(eraData) {
   const countEl = document.createElement("span");
   countEl.className = "era-count";
   countEl.textContent =
-    eraData.tracks.length +
-    (eraData.tracks.length === 1 ? " track" : " tracks");
+    filteredTracks.length + (filteredTracks.length === 1 ? " track" : " tracks");
   metaEl.appendChild(countEl);
 
   const genresEl = document.createElement("div");
@@ -135,12 +168,15 @@ function renderEra(eraData) {
 
   const ul = document.createElement("ul");
   ul.className = "track-list";
-  eraData.tracks.forEach((track, i) => ul.appendChild(renderTrack(track, i)));
+  filteredTracks.forEach((track, i) =>
+    ul.appendChild(renderTrack(track, i, state.search)),
+  );
   body.appendChild(ul);
 
   btn.addEventListener("click", () => {
     const isOpen = div.classList.toggle("open");
     btn.setAttribute("aria-expanded", String(isOpen));
+    updateToggleAllLabel();
   });
 
   div.appendChild(btn);
@@ -148,19 +184,118 @@ function renderEra(eraData) {
   return div;
 }
 
+function updateResultsCount(count, isFiltering) {
+  const el = document.getElementById("results-count");
+  if (!el) return;
+  el.textContent = isFiltering
+    ? `${count} ${count === 1 ? "track" : "tracks"} found`
+    : `${count} tracks`;
+}
+
+function updateToggleAllLabel() {
+  const btn = document.getElementById("toggle-all");
+  if (!btn) return;
+  const eras = document.querySelectorAll(".era");
+  if (eras.length === 0) {
+    btn.style.display = "none";
+    return;
+  }
+  btn.style.display = "";
+  const allOpen = [...eras].every((e) => e.classList.contains("open"));
+  btn.textContent = allOpen ? "collapse all" : "expand all";
+}
+
+function renderArchive() {
+  const archive = document.getElementById("archive");
+  archive.innerHTML = "";
+
+  const isFiltering = Boolean(state.search || state.genre);
+  let totalMatches = 0;
+
+  sortedData.forEach((era) => {
+    const filteredTracks = era.tracks.filter(trackMatches);
+    if (filteredTracks.length === 0) return;
+    totalMatches += filteredTracks.length;
+    const eraEl = renderEra(era, filteredTracks, isFiltering);
+    archive.appendChild(eraEl);
+  });
+
+  if (totalMatches === 0) {
+    archive.innerHTML = `<div class="empty-state">no tracks match your search.</div>`;
+  } else if (!isFiltering) {
+    const firstEra = archive.querySelector(".era");
+    if (firstEra) {
+      firstEra.classList.add("open");
+      firstEra
+        .querySelector(".era-header")
+        .setAttribute("aria-expanded", "true");
+    }
+  }
+
+  updateResultsCount(totalMatches, isFiltering);
+  updateToggleAllLabel();
+}
+
+function renderGenreFilters(allTracks) {
+  const wrap = document.getElementById("genre-filters");
+  const genres = getUniqueGenres(allTracks).sort((a, b) =>
+    a.localeCompare(b),
+  );
+
+  genres.forEach((genre) => {
+    const pill = document.createElement("button");
+    pill.type = "button";
+    pill.className = "genre-filter";
+    pill.textContent = genre.toLowerCase();
+    pill.dataset.genre = genre;
+    pill.addEventListener("click", () => {
+      state.genre = state.genre === genre ? null : genre;
+      wrap
+        .querySelectorAll(".genre-filter")
+        .forEach((p) => p.classList.toggle("active", p.dataset.genre === state.genre));
+      renderArchive();
+    });
+    wrap.appendChild(pill);
+  });
+}
+
+function setupSearch() {
+  const input = document.getElementById("search");
+  input.addEventListener("input", () => {
+    state.search = input.value.trim().toLowerCase();
+    renderArchive();
+  });
+}
+
+function setupToggleAll() {
+  const btn = document.getElementById("toggle-all");
+  btn.addEventListener("click", () => {
+    const eras = document.querySelectorAll(".era");
+    const allOpen = [...eras].every((e) => e.classList.contains("open"));
+    eras.forEach((e) => {
+      e.classList.toggle("open", !allOpen);
+      e.querySelector(".era-header").setAttribute(
+        "aria-expanded",
+        String(!allOpen),
+      );
+    });
+    updateToggleAllLabel();
+  });
+}
+
 async function init() {
   const archive = document.getElementById("archive");
   try {
     const res = await fetch("./tracks.json");
     const data = await res.json();
-    const sorted = [...data].sort((a, b) => b.year - a.year);
+    sortedData = [...data].sort((a, b) => b.year - a.year);
 
-    const allTracks = sorted.flatMap((e) => e.tracks);
+    const allTracks = sortedData.flatMap((e) => e.tracks);
     const lostTracks = allTracks.filter((t) => t.lost).length;
     const downloadableTracks = allTracks.filter(
       (t) => !t.lost && t.driveUrl,
     ).length;
-    const years = sorted.map((e) => e.year);
+    const years = sortedData.map((e) => e.year);
     const span =
       years.length > 1 ? Math.max(...years) - Math.min(...years) + 1 : 1;
 
@@ -169,16 +304,10 @@ async function init() {
     document.getElementById("stat-lost").textContent = lostTracks;
     document.getElementById("stat-span").textContent = span;
 
-    archive.innerHTML = "";
-    sorted.forEach((era) => archive.appendChild(renderEra(era)));
-
-    const firstEra = archive.querySelector(".era");
-    if (firstEra) {
-      firstEra.classList.add("open");
-      firstEra
-        .querySelector(".era-header")
-        .setAttribute("aria-expanded", "true");
-    }
+    renderGenreFilters(allTracks);
+    setupSearch();
+    setupToggleAll();
+    renderArchive();
   } catch (err) {
     archive.innerHTML = `<div class="empty-state">couldn't load tracks.json — make sure it's in the same folder.</div>`;
   }

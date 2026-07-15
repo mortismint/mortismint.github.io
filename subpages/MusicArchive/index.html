@@ -13,88 +13,150 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-wrap">
-      <nav>
-        <a href="https://mortismint.github.io/">mortismint</a>
-        <span class="sep">/</span>
-        <span>track archive</span>
-      </nav>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-inner">
+          <nav class="crumb">
+            <a href="https://mortismint.github.io/">← mortismint</a>
+          </nav>
 
-      <header class="header-glow">
-        <h1>every track<br />i've <span>ever made</span></h1>
-        <p class="header-sub">
-          a full chronological archive of released and unreleased productions.
-          some are lost to the void — marked accordingly.
-        </p>
-        <div class="stats-row">
-          <div class="stat">
-            <span class="stat-num" id="stat-total">—</span>
-            <span class="stat-label">tracks</span>
+          <div class="license-card">
+            <p class="license-title">
+              <span class="license-icon">♪</span>
+              license &amp; permissions
+              <span class="license-chip">CC BY-NC-SA 4.0</span>
+            </p>
+            <div class="license-divider"></div>
+            <div class="license-body">
+              <p>
+                free to reupload to non-commercial platforms like
+                <a href="https://soundcloud.com">SoundCloud</a> or
+                <a href="https://youtube.com">YouTube</a> with credit.
+                <strong>no</strong> commercial platforms — <em>Spotify</em>,
+                <em>Apple Music</em>, etc.
+              </p>
+              <p>
+                credit must include <strong>title</strong>,
+                <strong>author</strong>, and a <strong>source link</strong>. see
+                the
+                <a
+                  href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
+                  >full license terms</a
+                >.
+              </p>
+              <div class="license-warning">
+                <span class="license-warning-icon">⚠</span>
+                <p>no credit may result in a copyright takedown.</p>
+              </div>
+            </div>
           </div>
-          <div class="divider"></div>
-          <div class="stat">
-            <span class="stat-num" id="stat-available">—</span>
-            <span class="stat-label">downloadable</span>
-          </div>
-          <div class="divider"></div>
-          <div class="stat">
-            <span class="stat-num" id="stat-lost">—</span>
-            <span class="stat-label">lost media</span>
-          </div>
-          <div class="divider"></div>
-          <div class="stat">
-            <span class="stat-num" id="stat-span">—</span>
-            <span class="stat-label">years</span>
-          </div>
-        </div>
-      </header>
 
-      <main>
-        <div class="archive" id="archive">
-          <div class="empty-state">loading archive…</div>
-        </div>
-      </main>
-
-      <div class="license-card">
-        <p class="license-title">
-          <span class="license-icon">♪</span>
-          license &amp; permissions
-          <span class="license-chip">CC BY-NC-SA 4.0</span>
-        </p>
-        <div class="license-divider"></div>
-        <div class="license-body">
-          <p>
-            you're welcome to reupload my music to free platforms like
-            <a href="https://soundcloud.com">SoundCloud</a> or
-            <a href="https://youtube.com">YouTube</a>. please
-            <strong>do not</strong> upload to commercial platforms such as
-            <em>Spotify</em> or <em>Apple Music</em> — doing so violates the
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
-              >Creative Commons BY-NC-SA license</a
-            >
-            my music is released under.
-          </p>
-          <p>
-            when reuploading, you <strong>must</strong> give appropriate credit
-            — include the track <strong>title</strong>, <strong>author</strong>,
-            and a <strong>source link</strong> to the original alongside the
-            license type.
-          </p>
-          <div class="license-warning">
-            <span class="license-warning-icon">⚠</span>
-            <p>
-              failure to follow these guidelines may result in a copyright
-              takedown.
+          <div>
+            <h1>track<br />archive</h1>
+            <p class="lede">
+              every track i've ever made, released and unreleased. some are lost
+              to the void — marked accordingly.
             </p>
           </div>
-        </div>
-      </div>
 
-      <footer>
-        <span>© 2026 mortismint</span>
-        <p class="footer-middle">last update: 06/19/2026 - 10:45 PM</p>
-        <a href="https://mortismint.github.io/">← back to main</a>
-      </footer>
+          <dl class="stats" id="stats">
+            <div class="stat-row">
+              <dt>tracks</dt>
+              <dd id="stat-total">—</dd>
+            </div>
+            <div class="stat-row">
+              <dt>downloadable</dt>
+              <dd id="stat-available">—</dd>
+            </div>
+            <div class="stat-row">
+              <dt>lost media</dt>
+              <dd id="stat-lost">—</dd>
+            </div>
+            <div class="stat-row">
+              <dt>years active</dt>
+              <dd id="stat-span">—</dd>
+            </div>
+          </dl>
+
+          <div class="search-wrap">
+            <svg
+              class="search-icon"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input
+              id="search"
+              type="text"
+              placeholder="search tracks…"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="filter-group">
+            <p class="filter-label">genre</p>
+            <div class="genre-filters" id="genre-filters"></div>
+          </div>
+
+          <div class="sidebar-footer">
+            <p class="footer-update">last update: 06/19/2026 - 10:45 PM</p>
+            <p class="footer-copy">© 2026 mortismint</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="content">
+        <div class="content-columns">
+          <div class="archive-col">
+            <div class="content-toolbar">
+              <span class="results-count" id="results-count"></span>
+              <button class="toggle-all" id="toggle-all" type="button">
+                expand all
+              </button>
+            </div>
+
+            <div class="archive" id="archive">
+              <div class="empty-state">loading archive…</div>
+            </div>
+          </div>
+
+          <div class="support-col">
+            <div class="support-card">
+              <p class="support-title">
+                <span class="support-icon">♥</span>
+                support
+              </p>
+              <div class="support-divider"></div>
+              <p class="support-body">
+                if you enjoy the music, consider chucking a few bucks my way.
+              </p>
+              <div class="kofi-frame-wrap">
+                <iframe
+                  id="kofiframe"
+                  src="https://ko-fi.com/mortismint/?hidefeed=true&widget=true&embed=true&preview=true"
+                  style="
+                    border: none;
+                    width: 100%;
+                    padding: 4px;
+                    background: #f9f9f9;
+                  "
+                  height="712"
+                  title="mortismint"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
     <script src="script.js"></script>
   </body>
