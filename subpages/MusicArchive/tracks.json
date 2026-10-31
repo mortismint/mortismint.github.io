@@ -73,6 +73,38 @@
         "duration": "4:10",
         "driveUrl": "https://drive.google.com/file/d/1E1GitcU6PbLWHFOW24OHzIgangRPYfmv/view?usp=drive_link",
         "lost": false
+      },
+      {
+        "title": "Empty",
+        "genre": "Frenchcore",
+        "bpm": 200,
+        "duration": "2:17",
+        "driveUrl": "https://drive.google.com/file/d/14u0ShItKJTf8pKK3UDc9fA2TDyr5CY05/view?usp=drive_link",
+        "lost": false
+      },
+      {
+        "title": "Kurogane",
+        "genre": "Schranz - HardTechno",
+        "bpm": 152,
+        "duration": "3:46",
+        "driveUrl": "https://drive.google.com/file/d/1vJCMWBexTPmV873sGt_74eloZqRlWFaN/view?usp=drive_link",
+        "lost": false
+      },
+      {
+        "title": "Ryuusei",
+        "genre": "J-Core",
+        "bpm": 190,
+        "duration": "5:54",
+        "driveUrl": "https://drive.google.com/file/d/1Jqgc2cRhgLdBWhSYdzdvSVw57z7T6Ryu/view?usp=drive_link",
+        "lost": false
+      },
+      {
+        "title": "Koukyou",
+        "genre": "Frenchcore",
+        "bpm": 200,
+        "duration": "2:49",
+        "driveUrl": "https://drive.google.com/file/d/1eiKaGn9Q-xPjFNvnVrbqExRyKzt9DqCH/view?usp=drive_link",
+        "lost": false
       }
     ]
   },

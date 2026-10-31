@@ -1,163 +1,178 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>track archive · mortismint</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="layout">
-      <aside class="sidebar">
-        <div class="sidebar-inner">
-          <nav class="crumb">
-            <a href="https://mortismint.github.io/">← mortismint</a>
-          </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>track archive · mortismint</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="sidebar-inner">
+                    <nav class="crumb">
+                        <a href="https://mortismint.github.io/">← mortismint</a>
+                    </nav>
 
-          <div class="license-card">
-            <p class="license-title">
-              <span class="license-icon">♪</span>
-              license &amp; permissions
-              <span class="license-chip">CC BY-NC-SA 4.0</span>
-            </p>
-            <div class="license-divider"></div>
-            <div class="license-body">
-              <p>
-                free to reupload to non-commercial platforms like
-                <a href="https://soundcloud.com">SoundCloud</a> or
-                <a href="https://youtube.com">YouTube</a> with credit.
-                <strong>no</strong> commercial platforms — <em>Spotify</em>,
-                <em>Apple Music</em>, etc.
-              </p>
-              <p>
-                credit must include <strong>title</strong>,
-                <strong>author</strong>, and a <strong>source link</strong>. see
-                the
-                <a
-                  href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
-                  >full license terms</a
-                >.
-              </p>
-              <div class="license-warning">
-                <span class="license-warning-icon">⚠</span>
-                <p>no credit may result in a copyright takedown.</p>
-              </div>
-            </div>
-          </div>
+                    <div class="license-card">
+                        <p class="license-title">
+                            <span class="license-icon">♪</span>
+                            license &amp; permissions
+                            <span class="license-chip">CC BY-NC-SA 4.0</span>
+                        </p>
+                        <div class="license-divider"></div>
+                        <div class="license-body">
+                            <p>
+                                free to reupload to non-commercial platforms
+                                like
+                                <a href="https://soundcloud.com">SoundCloud</a>
+                                or
+                                <a href="https://youtube.com">YouTube</a> with
+                                credit. <strong>no</strong> commercial platforms
+                                — <em>Spotify</em>, <em>Apple Music</em>, etc.
+                            </p>
+                            <p>
+                                credit must include <strong>title</strong>,
+                                <strong>author</strong>, and a
+                                <strong>source link</strong>. see the
+                                <a
+                                    href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
+                                    >full license terms</a
+                                >.
+                            </p>
+                            <div class="license-warning">
+                                <span class="license-warning-icon">⚠</span>
+                                <p>
+                                    no credit may result in a copyright
+                                    takedown.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-          <div>
-            <h1>track<br />archive</h1>
-            <p class="lede">
-              every track i've ever made, released and unreleased. some are lost
-              to the void — marked accordingly.
-            </p>
-          </div>
+                    <div>
+                        <h1>track<br />archive</h1>
+                        <p class="lede">
+                            every track i've ever made, released and unreleased.
+                            some are lost to the void — marked accordingly.
+                        </p>
+                    </div>
 
-          <dl class="stats" id="stats">
-            <div class="stat-row">
-              <dt>tracks</dt>
-              <dd id="stat-total">—</dd>
-            </div>
-            <div class="stat-row">
-              <dt>downloadable</dt>
-              <dd id="stat-available">—</dd>
-            </div>
-            <div class="stat-row">
-              <dt>lost media</dt>
-              <dd id="stat-lost">—</dd>
-            </div>
-            <div class="stat-row">
-              <dt>years active</dt>
-              <dd id="stat-span">—</dd>
-            </div>
-          </dl>
+                    <dl class="stats" id="stats">
+                        <div class="stat-row">
+                            <dt>tracks</dt>
+                            <dd id="stat-total">—</dd>
+                        </div>
+                        <div class="stat-row">
+                            <dt>downloadable</dt>
+                            <dd id="stat-available">—</dd>
+                        </div>
+                        <div class="stat-row">
+                            <dt>lost media</dt>
+                            <dd id="stat-lost">—</dd>
+                        </div>
+                        <div class="stat-row">
+                            <dt>years active</dt>
+                            <dd id="stat-span">—</dd>
+                        </div>
+                    </dl>
 
-          <div class="search-wrap">
-            <svg
-              class="search-icon"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            <input
-              id="search"
-              type="text"
-              placeholder="search tracks…"
-              autocomplete="off"
-            />
-          </div>
+                    <div class="search-wrap">
+                        <svg
+                            class="search-icon"
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        <input
+                            id="search"
+                            type="text"
+                            placeholder="search tracks…"
+                            autocomplete="off"
+                        />
+                    </div>
 
-          <div class="filter-group">
-            <p class="filter-label">genre</p>
-            <div class="genre-filters" id="genre-filters"></div>
-          </div>
+                    <div class="filter-group">
+                        <p class="filter-label">genre</p>
+                        <div class="genre-filters" id="genre-filters"></div>
+                    </div>
 
-          <div class="sidebar-footer">
-            <p class="footer-update">last update: 07/27/2026 - 5:30 PM</p>
-            <p class="footer-copy">© 2026 mortismint</p>
-          </div>
+                    <div class="sidebar-footer">
+                        <p class="footer-update">
+                            last update: 10/31/2026 - 7:10 PM
+                        </p>
+                        <p class="footer-copy">© 2026 mortismint</p>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-columns">
+                    <div class="archive-col">
+                        <div class="content-toolbar">
+                            <span
+                                class="results-count"
+                                id="results-count"
+                            ></span>
+                            <button
+                                class="toggle-all"
+                                id="toggle-all"
+                                type="button"
+                            >
+                                expand all
+                            </button>
+                        </div>
+
+                        <div class="archive" id="archive">
+                            <div class="empty-state">loading archive…</div>
+                        </div>
+                    </div>
+
+                    <div class="support-col">
+                        <div class="support-card">
+                            <p class="support-title">
+                                <span class="support-icon">♥</span>
+                                support
+                            </p>
+                            <div class="support-divider"></div>
+                            <p class="support-body">
+                                if you enjoy the music, consider chucking a few
+                                bucks my way.
+                            </p>
+                            <div class="kofi-frame-wrap">
+                                <iframe
+                                    id="kofiframe"
+                                    src="https://ko-fi.com/mortismint/?hidefeed=true&widget=true&embed=true&preview=true"
+                                    style="
+                                        border: none;
+                                        width: 100%;
+                                        padding: 4px;
+                                        background: #f9f9f9;
+                                    "
+                                    height="712"
+                                    title="mortismint"
+                                    loading="lazy"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-      </aside>
-
-      <main class="content">
-        <div class="content-columns">
-          <div class="archive-col">
-            <div class="content-toolbar">
-              <span class="results-count" id="results-count"></span>
-              <button class="toggle-all" id="toggle-all" type="button">
-                expand all
-              </button>
-            </div>
-
-            <div class="archive" id="archive">
-              <div class="empty-state">loading archive…</div>
-            </div>
-          </div>
-
-          <div class="support-col">
-            <div class="support-card">
-              <p class="support-title">
-                <span class="support-icon">♥</span>
-                support
-              </p>
-              <div class="support-divider"></div>
-              <p class="support-body">
-                if you enjoy the music, consider chucking a few bucks my way.
-              </p>
-              <div class="kofi-frame-wrap">
-                <iframe
-                  id="kofiframe"
-                  src="https://ko-fi.com/mortismint/?hidefeed=true&widget=true&embed=true&preview=true"
-                  style="
-                    border: none;
-                    width: 100%;
-                    padding: 4px;
-                    background: #f9f9f9;
-                  "
-                  height="712"
-                  title="mortismint"
-                  loading="lazy"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-    <script src="script.js"></script>
-  </body>
+        <script src="script.js"></script>
+    </body>
 </html>
